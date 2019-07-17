@@ -10,10 +10,35 @@
     Name
     Captain
     Coach
-    Starting 5: PG, SG, SF, PF, C
-    Style: Big, small, etc...
+    Playmaker: PG, SG, SF, PF, C
+    Scheme: Big, small, etc...
 -->
 
-<form>
-    <label></label>
+<form method="post">
+    <label for="team-name">Team Name:</label>
+    <input id="team-name" name="team-name" type="text" />
+    <span>*</span>
+    <br />
+
+    <label for="captain">Team Captain:</label>
+    <input name="captain" type="text" />
+    <span>*</span>
+    <br />
+
+    <label for="coach">Coach Name:</label>
+    <input name="coach-name" type="text" />
+    <span>*</span>
+    <br />
+
+    <label for="scheme">Scheme:</label>
+    <input name="scheme" type="text" />
+    <span>*</span>
+    <br />
+    
+    <label for="playmaker">Main Playmaker:</label>
+    <input name="playmaker" type="text" />
+    <span>*</span>
+    <br />
+
+    <input type="submit" value="Register" />
 </form>
