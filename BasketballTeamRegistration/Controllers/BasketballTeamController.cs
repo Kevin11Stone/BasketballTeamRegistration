@@ -30,14 +30,14 @@ namespace BasketballTeamRegistration.Controllers
                 Playmaker = team["playmaker"]
             };
                    
-            // add to database here
-
+            // add to database here using ADO.NET
+            // TeamDatabase.Add(newTeam)
             return View();
 
         }
 
 
-        // model binding
+        // same process using model binding
 
         [HttpGet]
         public IActionResult RegModelBinding()
