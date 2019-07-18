@@ -1,0 +1,38 @@
+﻿
+@model Team
+@{
+    ViewData["Title"] = "RegModelBinding";
+}
+
+<h1>RegModelBinding</h1>
+
+<form method="post">
+
+    <label asp-for="TeamName"></label>
+    <input asp-for="TeamName" />
+    <span asp-validation-for="TeamName"></span>
+    <br />
+
+    <label asp-for="TeamCaptain"></label>
+    <input asp-for="TeamCaptain" />
+    <span asp-validation-for="TeamCaptain"></span>
+    <br />
+
+    <label asp-for="CoachName"></label>
+    <input asp-for="CoachName" />
+    <span asp-validation-for="CoachName"></span>
+    <br />
+
+    <label asp-for="Scheme"></label>
+    <input asp-for="Scheme" />
+    <span asp-validation-for="Scheme"></span>
+    <br />
+
+    <label asp-for="Playmaker"></label>
+    <input asp-for="Playmaker" />
+    <span asp-validation-for="Playmaker"></span>
+    <br />
+
+    <input type="submit" value="Register Team" />
+</form>
+
