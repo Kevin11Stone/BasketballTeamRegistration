@@ -29,9 +29,10 @@ namespace BasketballTeamRegistration.Controllers
                 Scheme = team["scheme"],
                 Playmaker = team["playmaker"]
             };
-                   
+
             // add to database here using ADO.NET
             // TeamDatabase.Add(newTeam)
+            TeamRegistrationDB.Add(newTeam);
             return View();
 
         }
@@ -48,7 +49,12 @@ namespace BasketballTeamRegistration.Controllers
         [HttpPost]
         public IActionResult RegModelBinding(Team t)
         {
-
+            if (ModelState.IsValid)
+            {
+                TeamRegistrationDB.Add(t);
+                // display success message
+            }
+            
             return View();
         }
 
