@@ -51,8 +51,11 @@ namespace BasketballTeamRegistration.Controllers
         {
             if (ModelState.IsValid)
             {
+                // add to database
                 TeamRegistrationDB.Add(t);
                 // display success message
+                ViewData["Success"] = "Team successfully registered!";
+                return View();
             }
             
             return View();
