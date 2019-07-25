@@ -8,6 +8,7 @@ namespace BasketballTeamRegistration.Models
 {
     static class TeamRegistrationDB
     {
+
         /// <summary>
         /// Connect to TeamRegistration database.
         /// </summary>
@@ -18,7 +19,11 @@ namespace BasketballTeamRegistration.Models
             connection.ConnectionString = "Data Source=localhost;Initial Catalog=TeamRegistration;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             return connection;
         }
-
+        
+        /// <summary>
+        /// Adds team object to database
+        /// </summary>
+        /// <param name="newTeam"></param>
         public static void Add(Team newTeam)
         {
             // connection object
